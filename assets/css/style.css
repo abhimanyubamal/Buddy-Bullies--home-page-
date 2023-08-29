@@ -164,7 +164,7 @@
     cursor: pointer;
 }
 
-.svg-icon:hover path{
+.svg-icon:hover path {
     fill: var(--background-color-tertiary);
 }
 
@@ -211,20 +211,6 @@
     width: 50%;
 }
 
-/* The circles on the timeline */
-/* .timeline-container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -13px;
-    background-color: var(--background-color-tertiary);
-    border: 2px solid white;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-} */
-
 /* Place the container to the left */
 .left {
     left: 0;
@@ -255,42 +241,42 @@
 
 .svg-1 {
     top: 5%;
-    left: 40%;
+    left: 40.137%;
     z-index: 1;
     width: 20% !important;
 }
 
 .svg-2 {
     top: 38%;
-    left: 40%;
+    left: 40.137%;
     z-index: 1;
     width: 20% !important;
 }
 
 .svg-3 {
     top: 72%;
-    left: 40%;
+    left: 40.137%;
     z-index: 1;
     width: 20% !important;
 }
 
 .svg-light-1 {
     top: 3.5%;
-    left: 40%;
+    left: 40.137%;
     z-index: 2;
     width: 20% !important;
 }
 
 .svg-light-2 {
     top: 36.5%;
-    left: 40%;
+    left: 40.137%;
     z-index: 2;
     width: 20% !important;
 }
 
 .svg-light-3 {
     top: 70.5%;
-    left: 40%;
+    left: 40.137%;
     z-index: 2;
     width: 20% !important;
 }
@@ -339,14 +325,9 @@
     flex-shrink: 0;
     margin-left: auto;
     content: url("../images/accordion-arrow-down.svg") !important;
-    /* background-image: url("../images/downward-svg.svg") !important; */
     background-repeat: no-repeat;
     background-size: var(--bs-accordion-btn-icon-width);
     transition: var(--bs-accordion-btn-icon-transition);
-    /* width: 11.414px !important;
-        height: 7.121px !important;
-        flex-shrink: 0 !important; */
-    /* background-color: var(--white, #FFF) !important; */
 }
 
 .accordion-body {
@@ -373,14 +354,22 @@ label {
     height: 20px !important;
     width: 20px !important;
     position: relative;
-    background-image: url("../images/bat-with-raised-wings.png");
-    z-index: 5;
+    float: right;
+    background: url("../images/bat-with-raised-wings.png"), white;
+    z-index: 11;
     display: none;
     cursor: pointer;
 }
 
 .label-new-img {
     background-image: url("../images/pumkin.png") !important;
+}
+
+
+@media (max-width: 1400px) {
+    .w-max-xxl-50 {
+        width: 50% !important;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -410,12 +399,14 @@ label {
         background: linear-gradient(90deg, rgba(128, 128, 128, 0.473), rgba(255, 255, 255, 0.123));
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: fixed;
+        backdrop-filter: blur(16px);
         top: 0;
         left: -100%;
         transition: all 400ms linear;
+        z-index: 10;
     }
 
     .menu a {
@@ -492,19 +483,19 @@ label {
 }
 
 @media (max-width:576px) {
-    .col-max-sm-12{
+    .col-max-sm-12 {
         width: 100% !important;
     }
 
-    .text-max-sm-center{
+    .text-max-sm-center {
         text-align: center;
     }
 
-    .max-sm-justify-center{
+    .max-sm-justify-center {
         justify-content: center;
     }
 
-    .m-max-sm-24{
+    .m-max-sm-24 {
         margin-top: 24px !important;
     }
 }
